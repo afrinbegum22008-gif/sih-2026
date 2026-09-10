@@ -1,0 +1,277 @@
+[
+  {
+    "id": "survey_design",
+    "name": "Survey Design",
+    "category": "STATISTICAL",
+    "description": "Design of sampling frames, questionnaire schedules, stratification, and estimation procedures for socio-economic surveys.",
+    "levels": {
+      "Beginner": "Understands questionnaire terminology and basic sampling frame concepts.",
+      "Intermediate": "Capable of designing multi-stage survey schedules and pre-testing instruments.",
+      "Advanced": "Designs complex national surveys, weight calibration, and non-sampling error modeling."
+    }
+  },
+  {
+    "id": "sampling",
+    "name": "Sampling Techniques",
+    "category": "STATISTICAL",
+    "description": "Probability sampling, two-stage stratified sampling (FSU/SSU), cluster sampling, and variance estimation for NSS surveys.",
+    "levels": {
+      "Beginner": "Calculates simple random sampling and basic stratification weights.",
+      "Intermediate": "Implements two-stage sampling designs and circular systematic sampling.",
+      "Advanced": "Optimizes sample allocation across sub-strata, jackknife variance, and small area estimation."
+    }
+  },
+  {
+    "id": "statistical_analysis",
+    "name": "Statistical Analysis & Inference",
+    "category": "STATISTICAL",
+    "description": "Hypothesis testing, descriptive and inferential statistics, variance estimation, regression modeling, and statistical significance in national sample datasets.",
+    "levels": {
+      "Beginner": "Understands central tendency, dispersion, p-values, and basic confidence intervals.",
+      "Intermediate": "Conducts multivariate regression, ANOVA, and weighted parametric and non-parametric tests.",
+      "Advanced": "Designs econometric models, time-series forecasting, and robust causal inference frameworks."
+    }
+  },
+  {
+    "id": "national_accounts",
+    "name": "National Accounts & GDP Compilation",
+    "category": "STATISTICAL",
+    "description": "System of National Accounts (SNA 2008), Gross Value Added (GVA), base year revisions, and supply-use tables.",
+    "levels": {
+      "Beginner": "Understands GDP, GVA, and primary/secondary/tertiary sector aggregations.",
+      "Intermediate": "Compiles quarterly GVA estimates and institutional sector accounts.",
+      "Advanced": "Develops supply-use tables, double deflation methodologies, and base year revisions."
+    }
+  },
+  {
+    "id": "price_statistics",
+    "name": "Price Statistics & Index Numbers",
+    "category": "STATISTICAL",
+    "description": "Consumer Price Index (CPI-Rural/Urban/Combined), WPI, Laspeyres formula, chaining, and geometric mean aggregation.",
+    "levels": {
+      "Beginner": "Computes elementary price relatives and basic Laspeyres indices.",
+      "Intermediate": "Manages price quotation validation, outlet substitution, and weight updates.",
+      "Advanced": "Constructs core inflation models, hedonic regression for quality changes, and index linkage."
+    }
+  },
+  {
+    "id": "labour_statistics",
+    "name": "Labour Statistics & PLFS",
+    "category": "STATISTICAL",
+    "description": "Periodic Labour Force Survey (PLFS) concepts, Usual Status (ps+ss), Current Weekly Status (CWS), LFPR, WPR, and UR.",
+    "levels": {
+      "Beginner": "Defines Labour Force Participation Rate, Worker Population Ratio, and Unemployment Rate.",
+      "Intermediate": "Extracts and analyzes PLFS household and person records according to activity statuses.",
+      "Advanced": "Evaluates informal economy employment, transition matrices, and multidimensional labour dynamics."
+    }
+  },
+  {
+    "id": "agricultural_statistics",
+    "name": "Agricultural Statistics",
+    "category": "STATISTICAL",
+    "description": "Crop estimation surveys (GCES), land-use classifications, cost of cultivation, and livestock censuses.",
+    "levels": {
+      "Beginner": "Understands crop yield estimation and acreage reporting protocols.",
+      "Intermediate": "Analyzes crop-cutting experiment data and agro-climatic trends.",
+      "Advanced": "Integrates remote sensing/GIS with crop cutting experiments for objective crop forecasting."
+    }
+  },
+  {
+    "id": "industrial_statistics",
+    "name": "Industrial Statistics & ASI",
+    "category": "STATISTICAL",
+    "description": "Annual Survey of Industries (ASI), Index of Industrial Production (IIP), NIC classifications, and factory sector aggregates.",
+    "levels": {
+      "Beginner": "Navigates National Industrial Classification (NIC) and ASI schedule blocks.",
+      "Intermediate": "Validates balance sheet blocks, invested capital, and net value added computations.",
+      "Advanced": "Constructs IIP monthly baskets, detects reporting anomalies in industrial units, and tracks factory growth."
+    }
+  },
+  {
+    "id": "sdg_indicators",
+    "name": "SDG Indicators & NIF",
+    "category": "STATISTICAL",
+    "description": "National Indicator Framework (NIF) for Sustainable Development Goals, baseline monitoring, and metadata tracking.",
+    "levels": {
+      "Beginner": "Identifies 17 SDGs and core MoSPI National Indicator Framework guidelines.",
+      "Intermediate": "Calculates normalized indicator scores and sub-national performance indices.",
+      "Advanced": "Designs localization frameworks and advises state departments on data gap remediation."
+    }
+  },
+  {
+    "id": "metadata_standards",
+    "name": "Metadata Standards & DDI",
+    "category": "STATISTICAL",
+    "description": "Statistical Data and Metadata eXchange (SDMX), Data Documentation Initiative (DDI), codebooks, and data dictionaries.",
+    "levels": {
+      "Beginner": "Understands the necessity of standardized variable naming and codebooks.",
+      "Intermediate": "Authors XML/JSON metadata catalogs conforming to DDI and NADA formats.",
+      "Advanced": "Implements automated SDMX data pipelines and harmonizes cross-survey registries."
+    }
+  },
+  {
+    "id": "data_quality_frameworks",
+    "name": "Data Quality Frameworks",
+    "category": "STATISTICAL",
+    "description": "UN Fundamental Principles of Official Statistics, National Quality Assurance Framework (NQAF), validation rules.",
+    "levels": {
+      "Beginner": "Understands integrity, objectivity, and transparency standards in statistical releases.",
+      "Intermediate": "Audits survey returns against range, logical consistency, and imputation checks.",
+      "Advanced": "Architects automated NQAF compliance dashboards and organizational data audits."
+    }
+  },
+  {
+    "id": "sql",
+    "name": "SQL & Relational Databases",
+    "category": "TECHNICAL",
+    "description": "Relational data querying, multi-table joins on census/survey microdata, window functions, and indexing.",
+    "levels": {
+      "Beginner": "Executes SELECT, WHERE, GROUP BY, and basic inner/left joins on single survey tables.",
+      "Intermediate": "Writes complex multi-table joins, subqueries, and aggregation over weighted survey strata.",
+      "Advanced": "Optimizes execution plans, designs dimensional schemas for time-series data, and writes analytic window functions."
+    }
+  },
+  {
+    "id": "python",
+    "name": "Python for Statistical Computing",
+    "category": "TECHNICAL",
+    "description": "Pandas, NumPy, Scipy, data cleaning, automated statistical pipeline scripting, and API integration.",
+    "levels": {
+      "Beginner": "Loads CSV/Excel files into pandas DataFrames and runs summary statistics.",
+      "Intermediate": "Cleans large microdata sets, handles missing values, and builds data transformation workflows.",
+      "Advanced": "Develops end-to-end automated pipelines, custom statistical packages, and high-performance vectorized operations."
+    }
+  },
+  {
+    "id": "r_stats",
+    "name": "R Programming & Econometrics",
+    "category": "TECHNICAL",
+    "description": "Survey package in R, tidyverse, econometric regression modeling, time-series forecasting (ARIMA), and markdown reports.",
+    "levels": {
+      "Beginner": "Uses ggplot2 and dplyr for exploratory analysis of tabular data.",
+      "Intermediate": "Applies the 'survey' library for complex weighted sampling variance and regression.",
+      "Advanced": "Builds reproducible Shiny analytical dashboards and automated quarterly report pipelines."
+    }
+  },
+  {
+    "id": "data_visualization",
+    "name": "Data Visualization & Dashboards",
+    "category": "TECHNICAL",
+    "description": "Translating statistical findings into interactive charts, thematic maps, executive dashboards, and infographics.",
+    "levels": {
+      "Beginner": "Generates standard bar, line, and pie charts with clean labels and titles.",
+      "Intermediate": "Builds interactive multi-filter dashboards and choropleth regional heatmaps.",
+      "Advanced": "Designs cognitive-friendly executive scorecards adhering to national data presentation standards."
+    }
+  },
+  {
+    "id": "ai_ml",
+    "name": "AI & Machine Learning in Statistics",
+    "category": "TECHNICAL",
+    "description": "Supervised/unsupervised learning, outlier and anomaly detection in enterprise census data, NLP for text coding.",
+    "levels": {
+      "Beginner": "Understands distinction between rule-based validation and machine learning models.",
+      "Intermediate": "Applies isolation forests and clustering to detect fake or anomalous survey responses.",
+      "Advanced": "Deploys production NLP classifiers for automated NIC/NCO occupation text categorization."
+    }
+  },
+  {
+    "id": "gis",
+    "name": "GIS & Spatial Statistics",
+    "category": "TECHNICAL",
+    "description": "Geographical Information Systems, QGIS, spatial autocorrelation, geofencing primary sampling units (PSUs).",
+    "levels": {
+      "Beginner": "Overlays survey coordinates on district administrative boundary shapefiles.",
+      "Intermediate": "Performs spatial buffer analysis and detects spatial autocorrelation (Moran's I).",
+      "Advanced": "Automates satellite imagery feature extraction and spatial interpolation for unobserved clusters."
+    }
+  },
+  {
+    "id": "apis",
+    "name": "APIs & System Integration",
+    "category": "TECHNICAL",
+    "description": "RESTful API consumption, statistical microservices, JSON/XML payload serialization, and secure endpoint integration.",
+    "levels": {
+      "Beginner": "Makes GET requests to public statistical data portals (Open Government Data - OGD).",
+      "Intermediate": "Builds REST endpoints for publishing statistical indicators to line ministries.",
+      "Advanced": "Architects high-throughput microservices with rate limiting, OAuth 2.0, and API gateway telemetry."
+    }
+  },
+  {
+    "id": "cybersecurity",
+    "name": "Cybersecurity & Data Protection",
+    "category": "DIGITAL GOVERNANCE",
+    "description": "Securing national statistical repositories, role-based access control, cryptographic hashing, and threat prevention.",
+    "levels": {
+      "Beginner": "Follows password hygiene, phishing defense, and endpoint device security protocols.",
+      "Intermediate": "Implements role-based access controls, database audit logging, and encrypted backups.",
+      "Advanced": "Conducts vulnerability assessments and designs defense-in-depth architecture for national servers."
+    }
+  },
+  {
+    "id": "data_privacy",
+    "name": "Data Privacy & Anonymization",
+    "category": "DIGITAL GOVERNANCE",
+    "description": "Digital Personal Data Protection (DPDP) Act 2023, Statistical Confidentiality, k-anonymity, differential privacy.",
+    "levels": {
+      "Beginner": "Understands legal obligation of respondent confidentiality under the Collection of Statistics Act.",
+      "Intermediate": "Applies cell suppression and top/bottom coding on public use microdata files (PUMFs).",
+      "Advanced": "Implements formal differential privacy noise mechanisms and re-identification risk audits."
+    }
+  },
+  {
+    "id": "dpi",
+    "name": "Digital Public Infrastructure & Gov Cloud",
+    "category": "DIGITAL GOVERNANCE",
+    "description": "India Stack, MeghRaj cloud, Digilocker, e-Sign, and National Data Governance Framework Policy (NDGFP).",
+    "levels": {
+      "Beginner": "Understands the core components of India Stack and Government e-Marketplace (GeM).",
+      "Intermediate": "Integrates applications with MeghRaj cloud and Aadhaar-based e-Sign protocols.",
+      "Advanced": "Architects federated data exchange platforms under the National Data Governance Framework."
+    }
+  },
+  {
+    "id": "leadership",
+    "name": "Leadership & Decision Making",
+    "category": "BEHAVIOURAL / MANAGERIAL",
+    "description": "Strategic direction, evidence-informed policy leadership, crisis management, and inspiring inter-disciplinary teams.",
+    "levels": {
+      "Beginner": "Demonstrates accountability and aligns personal tasks with divisional mandates.",
+      "Intermediate": "Leads field teams during census operations and arbitrates conflicting data interpretations.",
+      "Advanced": "Formulates institutional statistical vision, steers policy advisory committees, and drives reform."
+    }
+  },
+  {
+    "id": "project_management",
+    "name": "Project Management in Official Operations",
+    "category": "BEHAVIOURAL / MANAGERIAL",
+    "description": "Gantt charts, critical path method, budget tracking for nationwide field surveys, and vendor/enumerator monitoring.",
+    "levels": {
+      "Beginner": "Tracks survey milestone checklists and flags operational delays promptly.",
+      "Intermediate": "Manages operational budgets, enumerator rosters, and multi-round survey schedules.",
+      "Advanced": "Directs nationwide census lifecycle from gazette notification to data dissemination."
+    }
+  },
+  {
+    "id": "communication",
+    "name": "Communication & Statistical Dissemination",
+    "category": "BEHAVIOURAL / MANAGERIAL",
+    "description": "Clear presentation of statistical trends to ministers, media, academia, and the public without misleading narratives.",
+    "levels": {
+      "Beginner": "Drafts clear technical notes and responses to parliamentary questions.",
+      "Intermediate": "Presents survey findings in press briefings and prepares executive summaries.",
+      "Advanced": "Masters crisis communication regarding statistical revisions and leads high-level stakeholder discourse."
+    }
+  },
+  {
+    "id": "ethics",
+    "name": "Ethics & Professional Integrity",
+    "category": "BEHAVIOURAL / MANAGERIAL",
+    "description": "Unbiased data reporting, resistance to external pressures, adherence to ISI Declaration on Professional Ethics.",
+    "levels": {
+      "Beginner": "Demonstrates transparency and reports discrepancies without concealment.",
+      "Intermediate": "Enforces objective standards in enumeration and protects field staff from bias.",
+      "Advanced": "Champions institutional autonomy and ethical governance across the statistical system."
+    }
+  }
+]

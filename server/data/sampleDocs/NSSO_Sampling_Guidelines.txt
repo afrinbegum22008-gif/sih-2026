@@ -1,0 +1,38 @@
+NATIONAL STATISTICAL SYSTEMS TRAINING ACADEMY (NSSTA)
+GREATER NOIDA, UTTAR PRADESH
+MINISTRY OF STATISTICS AND PROGRAMME IMPLEMENTATION
+
+MODULE NOTES: TWO-STAGE STRATIFIED SAMPLING & VARIANCE ESTIMATION IN NSSO SURVEYS
+
+1. Stratified Multi-Stage Design
+The socio-economic surveys conducted by NSSO adopt a stratified two-stage sampling design.
+- First Stage Units (FSUs): Census villages (Panchayat wards) in the rural sector and Urban Frame Survey (UFS) blocks in the urban sector.
+- Second Stage Units (SSUs) / Ultimate Stage Units (USUs): Households listed in the selected FSUs. For enterprise surveys, the SSUs comprise non-agricultural informal enterprises.
+
+2. Stratification Strategy
+Each district of a State/UT is taken as a basic stratum.
+Within each district, rural areas are stratified into agricultural/topographical sub-strata based on population size or distance from market towns.
+In the urban sector, towns are stratified into million-plus cities and other urban towns.
+Stratification achieves minimum within-stratum variance while capturing socio-demographic diversity between strata.
+
+3. Allocation and Selection of FSUs
+The total sample size of FSUs is allocated across States and UTs in proportion to population and past survey coefficient of variation (CV).
+Within each stratum, FSUs are selected by Probability Proportional to Size with Replacement (PPSWR) or Circular Systematic Sampling (CSS) with size being population or number of households as per the census frame.
+
+4. Estimation of Aggregates and Variance
+Surveys are drawn in the form of two independent interpenetrating sub-samples:
+- Sub-sample 1 provides an independent unbiased estimator Y1.
+- Sub-sample 2 provides an independent unbiased estimator Y2.
+The combined pooled estimate is Y_hat = (Y1 + Y2) / 2.
+The unbiased estimate of the variance of the pooled mean Y_hat is given by:
+Var(Y_hat) = (Y1 - Y2)^2 / 4.
+The relative standard error (RSE) or Coefficient of Variation (CV) is calculated as:
+RSE(Y_hat) = [sqrt(Var(Y_hat)) / Y_hat] * 100.
+If the RSE of an estimate exceeds 20%, the estimate is flagged as unreliable for district-level policy dissemination.
+
+5. Learning Summary for Statistical Officers
+Officers must be proficient in:
+- Constructing sampling frames from UFS maps and Census village directories.
+- Computing sampling multipliers (inverses of selection probabilities) at each stage.
+- Deriving pooled estimates from interpenetrating sub-samples.
+- Evaluating sampling errors vs non-sampling response biases.

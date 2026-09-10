@@ -1,0 +1,58 @@
+MINISTRY OF STATISTICS AND PROGRAMME IMPLEMENTATION (MoSPI)
+GOVERNMENT OF INDIA
+SURVEY DESIGN AND RESEARCH DIVISION (SDRD), KOLKATA
+
+TECHNICAL MANUAL: RELATIONAL QUERYING & SQL FOR OFFICIAL SURVEY MICRODATA
+
+1. Overview and Relational Schema Design
+Large-scale socio-economic surveys conducted by the National Sample Survey Office (NSSO), such as the Periodic Labour Force Survey (PLFS) and Consumer Expenditure Survey (CES), structure microdata across normalized tabular blocks:
+- Block 1 & 2: Identification of Sample Household (State, District, Sub-sample, FSU, SSU, Sector).
+- Block 3: Household Characteristics (Household Size, Religion, Social Group, Monthly Consumption).
+- Block 4: Demographic and Activity Roster of Household Members (Person Serial No, Age, Gender, General Education, Usual Principal Activity, Current Weekly Status).
+
+2. Critical SQL Patterns in Microdata Extraction
+When conducting cross-sectional analysis, an analyst must link household level characteristics to individual person records.
+A common failure in statistical compilation is the omission of households where some members were absent or non-respondents.
+Therefore, standard INNER JOIN operations risk dropping valid sample units and distorting population weight sums.
+The established best practice in official data curation is to utilize LEFT OUTER JOIN from the Master Household Block to the Person Block:
+
+SELECT 
+    h.fsu_no,
+    h.sample_hh_no,
+    h.state_code,
+    h.sector,
+    h.multiplier,
+    p.person_sno,
+    p.age,
+    p.usual_principal_status
+FROM plfs_hh_master h
+LEFT OUTER JOIN plfs_person_roster p
+    ON h.fsu_no = p.fsu_no AND h.sample_hh_no = p.sample_hh_no
+WHERE h.sector = '1'; -- Rural Sector
+
+3. Aggregation and Weighted Multipliers
+In official statistics, unweighted row counts do NOT represent population counts. Every survey record carries an inflation factor or sampling multiplier (often divided by 100 or 200 depending on sub-sample pooling).
+To estimate the total rural unemployed population:
+SELECT 
+    h.state_code,
+    SUM(CASE WHEN p.usual_principal_status = '81' THEN h.multiplier / 100.0 ELSE 0 END) AS estimated_unemployed_persons
+FROM plfs_hh_master h
+JOIN plfs_person_roster p ON h.fsu_no = p.fsu_no AND h.sample_hh_no = p.sample_hh_no
+GROUP BY h.state_code;
+
+4. Analytic Partitioning with Window Functions
+When benchmarking enterprise productivity in the Annual Survey of Industries (ASI), officers must rank factories within 2-digit National Industrial Classification (NIC) categories without collapsing the microdata records.
+SQL Window Functions allow partition ranking:
+SELECT 
+    factory_id,
+    nic_2digit,
+    gross_output,
+    DENSE_RANK() OVER (PARTITION BY nic_2digit ORDER BY gross_output DESC) as output_rank
+FROM asi_factory_returns;
+
+5. Summary of Competency Requirements
+Officers operating in data management cells are expected to master:
+- Relational schema modeling and outer join preservation.
+- Weighted multiplier aggregation in SQL expressions.
+- Window functions (ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD) for time-series and cross-sectional indices.
+- Database indexing on compound survey keys (State + District + FSU + SSU).

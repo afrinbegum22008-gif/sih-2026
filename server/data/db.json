@@ -1,0 +1,457 @@
+{
+  "users": [
+    {
+      "id": "usr-001",
+      "email": "ananya.sharma@mospi.gov.in",
+      "employeeId": "MOSPI-NAD-7011",
+      "name": "Ananya Sharma",
+      "role": "officer",
+      "password": "MoSPI@123",
+      "designation": "Senior Statistical Officer",
+      "department": "National Accounts Division (NAD), New Delhi",
+      "avatar": "AS"
+    },
+    {
+      "id": "usr-002",
+      "email": "rahul.verma@mospi.gov.in",
+      "employeeId": "MOSPI-SDRD-5204",
+      "name": "Rahul Verma",
+      "role": "officer",
+      "password": "MoSPI@123",
+      "designation": "Statistical Officer",
+      "department": "Survey Design and Research Division (SDRD), Kolkata",
+      "avatar": "RV"
+    },
+    {
+      "id": "usr-003",
+      "email": "priya.nair@mospi.gov.in",
+      "employeeId": "MOSPI-DQAD-4190",
+      "name": "Priya Nair",
+      "role": "officer",
+      "password": "MoSPI@123",
+      "designation": "Statistical Officer",
+      "department": "Survey Design and Research Division (SDRD), Kolkata",
+      "avatar": "PN"
+    },
+    {
+      "id": "usr-004",
+      "email": "arjun.reddy@mospi.gov.in",
+      "employeeId": "MOSPI-DQAD-6325",
+      "name": "Arjun Reddy",
+      "role": "officer",
+      "password": "MoSPI@123",
+      "designation": "Senior Statistical Officer",
+      "department": "Data Quality Assurance Division (DQAD), Kolkata",
+      "avatar": "AR"
+    },
+    {
+      "id": "usr-005",
+      "email": "sneha.das@mospi.gov.in",
+      "employeeId": "MOSPI-SSD-3088",
+      "name": "Sneha Das",
+      "role": "officer",
+      "password": "MoSPI@123",
+      "designation": "Deputy Director (Statistics)",
+      "department": "Social Statistics Division (SSD) / SDG Cell, New Delhi",
+      "avatar": "SD"
+    },
+    {
+      "id": "usr-admin",
+      "email": "admin@mospi.gov.in",
+      "employeeId": "MOSPI-HQ-0001",
+      "name": "Official Statistical Officer",
+      "role": "admin",
+      "password": "Admin@123",
+      "designation": "Statistical Officer",
+      "department": "National Sample Survey Office (NSSO)",
+      "avatar": "VK"
+    }
+  ],
+  "officerProfiles": {
+    "usr-001": {
+      "userId": "usr-001",
+      "email": "ananya.sharma@mospi.gov.in",
+      "name": "Ananya Sharma",
+      "employeeId": "MOSPI-NAD-7011",
+      "designation": "Senior Statistical Officer",
+      "department": "National Accounts Division (NAD), New Delhi",
+      "jobRole": "Economic & National Accounts Analyst",
+      "currentAssignment": "National Accounts & Gross Value Added (GVA) Compilation",
+      "specialization": "Macroeconomic Accounts, GVA/GDP Methodology, Index Deflators",
+      "relevantDomain": "Macroeconomic Accounts, GVA/GDP Methodology, Index Deflators",
+      "educationalQualification": "M.Sc. Statistics & Econometrics (ISI Delhi)",
+      "workExperience": "6.5 Years",
+      "previousTrainings": "NSSTA Foundation Course; Macroeconomic Modeling",
+      "updatedAt": "2026-09-10T08:21:30.241Z"
+    },
+    "usr-002": {
+      "userId": "usr-002",
+      "email": "rahul.verma@mospi.gov.in",
+      "name": "Rahul Verma",
+      "employeeId": "MOSPI-SDRD-5204",
+      "designation": "Statistical Officer",
+      "department": "Survey Design and Research Division (SDRD), Kolkata",
+      "jobRole": "Survey & Data Collection Officer",
+      "currentAssignment": "Household Socio-Economic Survey & Periodic Labour Force Survey (PLFS)",
+      "specialization": "Survey Design, Multi-Stage Sampling, Field Methodology",
+      "relevantDomain": "Survey Design, Multi-Stage Sampling, Field Methodology",
+      "educationalQualification": "M.Sc. Mathematical Statistics (Delhi University)",
+      "workExperience": "4 Years",
+      "previousTrainings": "Basic Survey Methodology",
+      "updatedAt": "2026-09-10T02:00:00.000Z"
+    },
+    "usr-003": {
+      "userId": "usr-003",
+      "email": "priya.nair@mospi.gov.in",
+      "name": "Priya Nair",
+      "employeeId": "MOSPI-DQAD-4190",
+      "designation": "Statistical Officer",
+      "department": "Survey Design and Research Division (SDRD), Kolkata",
+      "jobRole": "Survey & Data Collection Officer",
+      "currentAssignment": "Household Socio-Economic Survey & Periodic Labour Force Survey (PLFS)",
+      "specialization": "Survey Design, Multi-Stage Sampling, Field Methodology",
+      "relevantDomain": "Survey Design, Multi-Stage Sampling, Field Methodology",
+      "educationalQualification": "Ph.D. Applied Statistics & Computational Data Science",
+      "workExperience": "8.5 Years",
+      "previousTrainings": "Advanced Statistical Computing; Executive Leadership",
+      "updatedAt": "2026-09-10T10:06:01.240Z"
+    },
+    "usr-004": {
+      "userId": "usr-004",
+      "email": "arjun.reddy@mospi.gov.in",
+      "name": "Arjun Reddy",
+      "employeeId": "MOSPI-DQAD-6325",
+      "designation": "Senior Statistical Officer",
+      "department": "Data Quality Assurance Division (DQAD), Kolkata",
+      "jobRole": "Technical Officer",
+      "currentAssignment": "Statistical Data Processing & Automation",
+      "specialization": "Python, SQL, Cloud Computing",
+      "relevantDomain": "Python, SQL, Cloud Computing",
+      "educationalQualification": "B.Tech Computer Science & Data Engineering",
+      "workExperience": "6 Years",
+      "previousTrainings": "SQL Fundamentals",
+      "updatedAt": "2026-09-09T22:00:00.000Z"
+    },
+    "usr-005": {
+      "userId": "usr-005",
+      "email": "sneha.das@mospi.gov.in",
+      "name": "Sneha Das",
+      "employeeId": "MOSPI-SSD-3088",
+      "designation": "Deputy Director (Statistics)",
+      "department": "Social Statistics Division (SSD) / SDG Cell, New Delhi",
+      "jobRole": "Programme & Data Management Officer",
+      "currentAssignment": "SDG Indicators & Data Dissemination",
+      "specialization": "GIS, Data Visualization, Open Data",
+      "relevantDomain": "GIS, Data Visualization, Open Data",
+      "educationalQualification": "M.Sc. Geoinformatics & Public Policy",
+      "workExperience": "10 Years",
+      "previousTrainings": "Data Visualization",
+      "updatedAt": "2026-09-10T08:39:26.066Z"
+    },
+    "usr-admin": {
+      "name": "Official Statistical Officer",
+      "jobRole": "Statistical Officer",
+      "currentAssignment": "Labour Statistics & Periodic Labour Force Survey (PLFS)",
+      "designation": "Statistical Officer",
+      "department": "National Sample Survey Office (NSSO)",
+      "educationalQualification": "M.Sc. Statistics",
+      "workExperience": "4 Years",
+      "previousTrainings": "NSSTA Foundation Course",
+      "relevantDomain": "Labour and Social Statistics",
+      "employeeId": "MOSPI-HQ-0001",
+      "userId": "usr-admin",
+      "updatedAt": "2026-09-10T10:04:13.395Z"
+    }
+  },
+  "roleCompetencyRequirements": {
+    "Economic & National Accounts Analyst": {
+      "defaultRequirements": {
+        "national_accounts": "Advanced",
+        "price_statistics": "Advanced",
+        "statistical_analysis": "Advanced",
+        "data_visualization": "Intermediate",
+        "data_quality_frameworks": "Intermediate"
+      },
+      "assignments": {
+        "National Accounts & Gross Value Added (GVA) Compilation": {
+          "national_accounts": "Advanced",
+          "price_statistics": "Advanced",
+          "statistical_analysis": "Advanced",
+          "data_visualization": "Intermediate",
+          "data_quality_frameworks": "Intermediate"
+        }
+      }
+    },
+    "Statistical Officer": {
+      "defaultRequirements": {
+        "national_accounts": "Advanced",
+        "price_statistics": "Advanced",
+        "statistical_analysis": "Advanced",
+        "data_visualization": "Intermediate",
+        "data_quality_frameworks": "Intermediate"
+      }
+    },
+    "Survey & Data Collection Officer": {
+      "defaultRequirements": {
+        "survey_design": "Advanced",
+        "sampling": "Advanced",
+        "labour_statistics": "Advanced",
+        "data_quality_frameworks": "Intermediate",
+        "sql": "Intermediate"
+      },
+      "assignments": {
+        "Household Socio-Economic Survey & Periodic Labour Force Survey (PLFS)": {
+          "survey_design": "Advanced",
+          "sampling": "Advanced",
+          "labour_statistics": "Advanced",
+          "data_quality_frameworks": "Intermediate",
+          "sql": "Intermediate"
+        }
+      }
+    },
+    "Technical / Data-Oriented Officer": {
+      "defaultRequirements": {
+        "ai_ml": "Advanced",
+        "python": "Advanced",
+        "sql": "Advanced",
+        "data_visualization": "Advanced",
+        "dpi": "Intermediate"
+      },
+      "assignments": {
+        "Big Data & AI Analytics Cell for Anomaly Detection & Modernization": {
+          "ai_ml": "Advanced",
+          "python": "Advanced",
+          "sql": "Advanced",
+          "data_visualization": "Advanced",
+          "dpi": "Intermediate"
+        }
+      }
+    },
+    "Leadership / Management-Oriented Officer": {
+      "defaultRequirements": {
+        "leadership": "Advanced",
+        "project_management": "Advanced",
+        "communication": "Advanced",
+        "ethics": "Advanced",
+        "data_quality_frameworks": "Advanced",
+        "data_privacy": "Intermediate"
+      }
+    }
+  },
+  "selfAssessments": {
+    "usr-001": {
+      "national_accounts": 2,
+      "price_statistics": 2,
+      "statistical_analysis": 3,
+      "data_visualization": 3,
+      "data_quality_frameworks": 3,
+      "sql": 2,
+      "sampling": 3,
+      "labour_statistics": 4,
+      "survey_design": 4
+    },
+    "usr-002": {
+      "survey_design": 2,
+      "sampling": 2,
+      "labour_statistics": 2,
+      "data_quality_frameworks": 3,
+      "sql": 3
+    },
+    "usr-003": {
+      "ai_ml": 2,
+      "python": 2,
+      "sql": 2,
+      "data_visualization": 3,
+      "dpi": 2,
+      "survey_design": 5,
+      "sampling": 5,
+      "labour_statistics": 4,
+      "data_quality_frameworks": 1
+    },
+    "usr-005": {
+      "sdg_indicators": 5,
+      "gis": 5,
+      "data_visualization": 2,
+      "metadata_standards": 2,
+      "leadership": 2
+    }
+  },
+  "assessmentResults": {
+    "usr-003": {
+      "completedAt": "2026-09-10T09:49:04.190Z",
+      "totalQuestions": 25,
+      "correctCount": 8,
+      "overallScore": 32,
+      "competencyScores": {
+        "survey_design": {
+          "score": 20,
+          "correctCount": 1,
+          "totalQuestions": 5,
+          "subjectScoreText": "1 / 5",
+          "demonstratedLevel": "Beginner",
+          "explanation": "Officer answered 1 of 5 questions correctly (20%), demonstrating beginner operational capability across tested scenarios.",
+          "strengths": [
+            "Completed baseline scenario questions in survey design"
+          ],
+          "weaknesses": [
+            "Foundational concepts and standard statutory workflows require immediate remediation"
+          ],
+          "competencyName": "Survey Design"
+        },
+        "sampling": {
+          "score": 20,
+          "correctCount": 1,
+          "totalQuestions": 5,
+          "subjectScoreText": "1 / 5",
+          "demonstratedLevel": "Beginner",
+          "explanation": "Officer answered 1 of 5 questions correctly (20%), demonstrating beginner operational capability across tested scenarios.",
+          "strengths": [
+            "Completed baseline scenario questions in sampling"
+          ],
+          "weaknesses": [
+            "Foundational concepts and standard statutory workflows require immediate remediation"
+          ],
+          "competencyName": "Sampling Techniques"
+        },
+        "labour_statistics": {
+          "score": 60,
+          "correctCount": 3,
+          "totalQuestions": 5,
+          "subjectScoreText": "3 / 5",
+          "demonstratedLevel": "Intermediate",
+          "explanation": "Officer answered 3 of 5 questions correctly (60%), demonstrating intermediate operational capability across tested scenarios.",
+          "strengths": [
+            "Demonstrated analytical accuracy in labour statistics up to Level 3"
+          ],
+          "weaknesses": [
+            "Advanced methodological nuances and edge-case execution require reinforcement"
+          ],
+          "competencyName": "Labour Statistics & PLFS"
+        },
+        "data_quality_frameworks": {
+          "score": 40,
+          "correctCount": 2,
+          "totalQuestions": 5,
+          "subjectScoreText": "2 / 5",
+          "demonstratedLevel": "Intermediate",
+          "explanation": "Officer answered 2 of 5 questions correctly (40%), demonstrating intermediate operational capability across tested scenarios.",
+          "strengths": [
+            "Completed baseline scenario questions in data quality frameworks"
+          ],
+          "weaknesses": [
+            "Advanced methodological nuances and edge-case execution require reinforcement"
+          ],
+          "competencyName": "Data Quality Frameworks"
+        },
+        "sql": {
+          "score": 20,
+          "correctCount": 1,
+          "totalQuestions": 5,
+          "subjectScoreText": "1 / 5",
+          "demonstratedLevel": "Beginner",
+          "explanation": "Officer answered 1 of 5 questions correctly (20%), demonstrating beginner operational capability across tested scenarios.",
+          "strengths": [
+            "Completed baseline scenario questions in sql"
+          ],
+          "weaknesses": [
+            "Foundational concepts and standard statutory workflows require immediate remediation"
+          ],
+          "competencyName": "SQL & Relational Databases"
+        }
+      }
+    },
+    "usr-001": {
+      "userId": "usr-001",
+      "completedAt": "2026-09-10T09:56:56.226Z",
+      "competencyScores": {
+        "sql": {
+          "score": 85,
+          "demonstratedLevel": "Intermediate",
+          "questionsAnswered": 4
+        }
+      }
+    }
+  },
+  "progressRecords": {
+    "usr-001": [
+      {
+        "id": "prog-1789036817222",
+        "userId": "usr-001",
+        "competencyId": "sql",
+        "competencyName": "SQL & Relational Databases",
+        "materialTitle": "Official SQL Microdata Querying Guide",
+        "beforeLevel": "Beginner",
+        "afterLevel": "Intermediate",
+        "improvementDelta": 1,
+        "quizScore": 85,
+        "correctCount": 13,
+        "totalQuestions": 15,
+        "scoreOutOf15": "13 / 15",
+        "evaluatedAt": "2026-09-10T10:40:17.222Z",
+        "remainingGapSeverity": "MEDIUM",
+        "statusMessage": "Post-learning course assessment evaluated at 13 / 15 (85%). Competency level determined as Intermediate based on demonstrated analytical answers.",
+        "nextStep": "Complete supplementary practical modules in NSSTA curriculum.",
+        "courseId": "course-sql",
+        "courseName": "Official SQL Microdata Querying Guide",
+        "pdfFileName": null
+      },
+      {
+        "id": "prog-1789035879131",
+        "userId": "usr-001",
+        "competencyId": "sql",
+        "competencyName": "SQL & Relational Databases",
+        "materialTitle": "Official SQL Microdata Querying Guide",
+        "beforeLevel": "Beginner",
+        "afterLevel": "Intermediate",
+        "improvementDelta": 1,
+        "quizScore": 85,
+        "correctCount": 13,
+        "totalQuestions": 15,
+        "scoreOutOf15": "13 / 15",
+        "evaluatedAt": "2026-09-10T10:24:39.131Z",
+        "remainingGapSeverity": "MEDIUM",
+        "statusMessage": "Post-learning course assessment evaluated at 13 / 15 (85%). Competency level determined as Intermediate based on demonstrated analytical answers.",
+        "nextStep": "Complete supplementary practical modules in NSSTA curriculum.",
+        "courseId": "course-sql",
+        "courseName": "Official SQL Microdata Querying Guide",
+        "pdfFileName": null
+      },
+      {
+        "id": "prog-1789034215794",
+        "userId": "usr-001",
+        "competencyId": "sql",
+        "competencyName": "SQL & Relational Databases",
+        "materialTitle": "Official SQL Microdata Querying Guide",
+        "beforeLevel": "Beginner",
+        "afterLevel": "Intermediate",
+        "improvementDelta": 1,
+        "quizScore": 85,
+        "correctCount": 13,
+        "totalQuestions": 15,
+        "scoreOutOf15": "13 / 15",
+        "evaluatedAt": "2026-09-10T09:56:55.794Z",
+        "remainingGapSeverity": "MEDIUM",
+        "statusMessage": "Post-learning course assessment evaluated at 13 / 15 (85%). Competency level determined as Intermediate based on demonstrated analytical answers.",
+        "nextStep": "Complete supplementary practical modules in NSSTA curriculum.",
+        "courseId": "course-sql",
+        "courseName": "Official SQL Microdata Querying Guide",
+        "pdfFileName": null
+      }
+    ]
+  },
+  "courseAssessments": {
+    "usr-001": {
+      "course-sql": {
+        "courseId": "course-sql",
+        "courseName": "Official SQL Microdata Querying Guide",
+        "officerId": "usr-001",
+        "pdfFileName": null,
+        "scoreOutOf15": "13 / 15",
+        "quizScore": 85,
+        "beforeLevel": "Beginner",
+        "afterLevel": "Intermediate",
+        "completedAt": "2026-09-10T10:40:17.724Z"
+      }
+    }
+  }
+}
