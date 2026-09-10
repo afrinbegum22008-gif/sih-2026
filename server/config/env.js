@@ -17,7 +17,7 @@ for (const envPath of envPaths) {
 require('dotenv').config(); // Fallback to default
 
 const config = {
-  PORT: process.env.PORT || 5000,
+  PORT: parseInt(process.env.PORT, 10) || 5000,
   NODE_ENV: process.env.NODE_ENV || 'development',
   AUTH_SECRET: process.env.AUTH_SECRET || 'mospi-samarthya-sankhyiki-secret-2026',
   

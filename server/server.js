@@ -1557,6 +1557,19 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
+// Serve production static assets from client/dist if built
+const clientDistPath = path.resolve(__dirname, '../client/dist');
+if (fs.existsSync(clientDistPath)) {
+  app.use(express.static(clientDistPath));
+  // Client-side routing fallback (SPA)
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api') || req.path.startsWith('/course-materials')) {
+      return next();
+    }
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+}
+
 // Global error handling middleware
 app.use((err, req, res, next) => {
   if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
@@ -1567,12 +1580,13 @@ app.use((err, req, res, next) => {
 });
 
 // Start Express server
-const PORT = config.PORT;
-const server = app.listen(PORT, () => {
+const PORT = parseInt(process.env.PORT, 10) || config.PORT || 5000;
+const HOST = '0.0.0.0';
+const server = app.listen(PORT, HOST, () => {
   console.log(`\n======================================================`);
   console.log(`  SAMARTHYA SANKHYIKI - INDIA'S OFFICIAL STATISTICAL`);
   console.log(`  COMPETENCY & LEARNING PLATFORM (SIH 2026)`);
-  console.log(`  Backend Server running on http://localhost:${PORT}`);
+  console.log(`  Backend Server running on http://${HOST}:${PORT}`);
   console.log(`  AI Engine: ${AIProvider.getProviderName()}`);
   console.log(`  iGOT Karmayogi Status: ${iGOTService.getStatus().authStatus}`);
   console.log(`  NSSTA / TPAC Status: ${NSSTAService.getStatus().authStatus}`);
