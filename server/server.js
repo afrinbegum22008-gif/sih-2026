@@ -26,8 +26,14 @@ const {
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// Middleware & Cross-Origin Resource Sharing (CORS)
+app.use(cors({
+  origin: true, // Dynamically reflects origin (supports Vercel, Netlify, Render, localhost)
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-user-id', 'x-user-role', 'Accept', 'Origin']
+}));
+app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -1557,18 +1563,76 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
-// Serve production static assets from client/dist if built
-const clientDistPath = path.resolve(__dirname, '../client/dist');
-if (fs.existsSync(clientDistPath)) {
+// Dynamic detection of compiled frontend client dist
+const candidateDistPaths = [
+  path.resolve(__dirname, '../client/dist'),
+  path.resolve(process.cwd(), 'client/dist'),
+  path.resolve(process.cwd(), 'dist'),
+  path.resolve(__dirname, 'dist')
+];
+
+let clientDistPath = null;
+for (const p of candidateDistPaths) {
+  if (fs.existsSync(path.join(p, 'index.html'))) {
+    clientDistPath = p;
+    break;
+  }
+}
+
+// API root summary endpoint
+app.get('/api', (req, res) => {
+  res.status(200).json({
+    status: 'ONLINE',
+    service: "Samarthya Sankhyiki API Engine",
+    healthEndpoint: '/api/health',
+    timestamp: new Date().toISOString()
+  });
+});
+
+if (clientDistPath) {
+  console.log(`[Static Serving] Serving production frontend from: ${clientDistPath}`);
   app.use(express.static(clientDistPath));
-  // Client-side routing fallback (SPA)
+
+  // SPA fallback for frontend client-side routes (Profile, Assessment, Admin, etc.)
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api') || req.path.startsWith('/course-materials')) {
       return next();
     }
     res.sendFile(path.join(clientDistPath, 'index.html'));
   });
+} else {
+  console.log('[Static Serving] No client dist found. Exposing root API landing handler on GET /');
+  // Standalone API deployment handler: guarantees GET / never throws "Cannot GET /"
+  app.get('/', (req, res) => {
+    res.status(200).json({
+      status: 'SUCCESS',
+      service: "Samarthya Sankhyiki - India's Official Statistical Competency Platform Backend",
+      message: 'Backend server is active and running successfully on Render!',
+      deployment: {
+        environment: process.env.NODE_ENV || 'production',
+        port: parseInt(process.env.PORT, 10) || config.PORT || 5000,
+        host: '0.0.0.0'
+      },
+      endpoints: {
+        health: '/api/health',
+        users: '/api/auth/users',
+        login: '/api/auth/login',
+        competencies: '/api/competencies',
+        adminDashboard: '/api/admin/dashboard'
+      },
+      timestamp: new Date().toISOString()
+    });
+  });
 }
+
+// Catch-all 404 for unresolved API routes
+app.all('/api/*', (req, res) => {
+  res.status(404).json({
+    error: 'API endpoint not found',
+    path: req.originalUrl,
+    method: req.method
+  });
+});
 
 // Global error handling middleware
 app.use((err, req, res, next) => {
